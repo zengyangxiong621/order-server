@@ -1,7 +1,7 @@
 module.exports = app => {
   const mongoose = require('mongoose')
 
-  mongoose.connect('mongodb://localhost:27017/order-sys', {useNewUrlParser: true, useUnifiedTopology: true});
+  mongoose.connect('mongodb://mongo:27017/order-sys', {useNewUrlParser: true, useUnifiedTopology: true});
   mongoose.connection.on("error", function (error) {
     console.log("数据库连接失败：" + error);
   });
